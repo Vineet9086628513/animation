@@ -51,6 +51,7 @@
     background: #000;
     transition: .5s;
   }
+
   figure:hover img {
     width: 130%;
     height: 255%;
@@ -71,8 +72,35 @@
     grid-auto-flow: column;
     grid-auto-columns: min(230px,35vmin);
     place-content: end center;
-    gap: 50px;
+    gap: 50%;
     background: 
       linear-gradient(#0000,rgb(50 50 50 / 88%)),
       url(https://assets.codepen.io/1480814/diablo-reaper-of-souls-mw-1360x768.jpg);
   }
+
+  /* For screen widths less than or equal to 768px (e.g., tablets and mobile devices) */
+@media (max-width: 768px) {
+  body {
+    grid-auto-columns: min(150px, 80vmin);
+    gap: 20%;
+  }
+  
+  figcaption {
+    font-size: min(24px, 4vmin);
+  }
+}
+
+
+
+  
+/* For screen widths less than or equal to 480px (e.g., small mobile devices) */
+@media (max-width: 480px) {
+  body {
+    grid-auto-columns: min(120px, 90vmin);
+    gap: 10%;
+  }
+  
+  figcaption {
+    font-size: min(20px, 3vmin);
+  }
+}
